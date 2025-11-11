@@ -1,4 +1,4 @@
-name: Python ej1
+name: Ej1
 
 on: push
 
@@ -7,11 +7,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Descargar el repositorio
-        uses: actions/checkout@v5
+      - name: Descargar código
+        uses: actions/checkout@v4
 
-      - name: Instalar pytest
+      - name: Instalar dependencias
         run: pip install pytest
 
-      - name: Ejecutar tests con pytest
+      - name: Ejecutar pruebas
         run: pytest test.py
+
